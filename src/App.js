@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import styled from "styled-components";
+import { GlobalStyles } from "./components/GlobalStyles.styles";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: black;
+`;
 
 function App() {
+  const [active, setActive] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyles />
+      <Navbar active={active} setActive={setActive} />
+      <Home setActive={setActive} />
+    </Container>
   );
 }
 
