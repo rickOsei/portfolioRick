@@ -130,7 +130,7 @@ function Contact({ mode, colorIndex }) {
           </Item>
         </Anchor>
 
-        <Anchor href="https://www.linkedin.com/RichardOseiAmpah">
+        <Anchor href="https://www.linkedin.com/in/richard-osei-ampah-a182801ba/">
           <Item>
             <BsLinkedin style={{ marginRight: "15px", color: color }} />
             <ItemText color={mode ? "black" : "white"}>
@@ -139,7 +139,7 @@ function Contact({ mode, colorIndex }) {
           </Item>
         </Anchor>
 
-        <Anchor href="https://www.twitter.com/RickOsei">
+        <Anchor href="https://twitter.com/Osei_Rick">
           <Item>
             <BsTwitter style={{ marginRight: "15px", color: color }} />
             <ItemText color={mode ? "black" : "white"}>Rick Osei</ItemText>
