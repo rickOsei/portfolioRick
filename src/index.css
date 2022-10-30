@@ -4,26 +4,3 @@
   letter-spacing: 1px;
   font-weight: 900;
 }
-
-@media screen and (min-width: 425px) and (max-width: 768px) {
-  .typed {
-    font-size: 20px;
-    line-height: 35px;
-    letter-spacing: 0.5px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1219px) {
-  .typed {
-    font-size: 20px;
-    line-height: 35px;
-  }
-}
-
-@media screen and (min-width: 1220px) {
-  .typed {
-    font-size: 23px;
-    line-height: 45px;
-    letter-spacing: 1px;
-  }
-}

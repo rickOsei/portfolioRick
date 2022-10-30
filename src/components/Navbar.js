@@ -13,8 +13,7 @@ const NavContainer = styled.nav`
   width: 100%;
   height: 80px;
   padding: 25px;
-  background: black;
-  color: white;
+  background: transparent;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
@@ -80,7 +79,7 @@ const NavLinks = styled.ul`
 
 const SideItem = styled.li`
   font-size: 15px;
-  color: white;
+  color: ${(props) => props.color};
 
   @media screen and (max-width: 425px) {
     font-size: 13.5px;
@@ -89,7 +88,7 @@ const SideItem = styled.li`
 
 const ExtraSideItem = styled.li`
   font-size: 15px;
-  color: white;
+  color: ${(props) => props.color};
 
   @media screen and (max-width: 425px) {
     font-size: 13.5px;
@@ -97,18 +96,6 @@ const ExtraSideItem = styled.li`
   @media screen and (min-width: 681px) {
     display: none;
   }
-`;
-
-const ProfileIcon = styled.img`
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  border: 2px solid rgba(189, 182, 182, 0.524);
-  border-radius: 50%;
-
-  position: absolute;
-  top: 15px;
-  left: 20px;
 `;
 
 const LogoContainer = styled.div`
@@ -131,10 +118,6 @@ const LogoIcon = styled.img`
   }
 `;
 
-LogoIcon.defaultProps = {
-  src: LogoBlack,
-};
-
 const LinksContainer = styled.div`
   display: none;
 
@@ -154,7 +137,7 @@ const ListItems = styled.li`
   margin: 0 20px;
   height: 30px;
   font-size: 14px;
-  color: white;
+  color: ${(props) => props.color};
   cursor: pointer;
 
   @media screen and (min-width: 1001px) {
@@ -167,12 +150,16 @@ const ListItems = styled.li`
   }
 
   &.active {
-    color: orange;
+    color: ${(props) => props.font};
 
     &:hover {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid ${(props) => props.color};
     }
   }
+`;
+
+const Anchor = styled.a`
+  text-decoration: none;
 `;
 
 const ButtonContainer = styled.div`
@@ -187,7 +174,7 @@ const ButtonContainer = styled.div`
 
 // active button function
 
-function Navbar({ active, setActive }) {
+function Navbar({ active, setActive, mode, colorIndex }) {
   useEffect(() => {
     const button = document.getElementsByClassName("btn");
     for (let i = 0; i < button.length; i++) {
@@ -204,59 +191,146 @@ function Navbar({ active, setActive }) {
     return () => {};
   }, []);
 
+  let color = "";
+  switch (colorIndex) {
+    case 1:
+      color = "red";
+      break;
+    case 2:
+      color = "violet";
+      break;
+    case 3:
+      color = "cyan";
+      break;
+    case 4:
+      color = "orange";
+      break;
+    default:
+      color = "red";
+  }
+
   return (
     <>
       <NavContainer>
         <SidebarButton>
           <AiOutlineBars
             onClick={() => setActive(active === true ? false : true)}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", color: mode ? "black" : "white" }}
           />
         </SidebarButton>
 
         <LogoContainer>
-          <LogoIcon src={Logo} />
+          <LogoIcon src={mode ? LogoBlack : Logo} />
         </LogoContainer>
         <LinksContainer>
           <List direction="row">
-            <ListItems className="btn">Home</ListItems>
-            <ListItems className="btn">About</ListItems>
-            <ListItems className="btn">Projects</ListItems>
-            <ListItems className="btn">Skills</ListItems>
-            <ListItems className="btn">Contact</ListItems>
+            <Anchor href="#">
+              <ListItems
+                className="btn"
+                font={color}
+                color={mode ? "black" : "white"}
+              >
+                Home
+              </ListItems>
+            </Anchor>
+
+            <Anchor href="#about">
+              <ListItems
+                className="btn"
+                font={color}
+                color={mode ? "black" : "white"}
+              >
+                About
+              </ListItems>
+            </Anchor>
+
+            <Anchor href="#projects">
+              <ListItems
+                className="btn"
+                font={color}
+                color={mode ? "black" : "white"}
+              >
+                Projects
+              </ListItems>
+            </Anchor>
+
+            <Anchor href="#tools">
+              <ListItems
+                className="btn"
+                font={color}
+                color={mode ? "black" : "white"}
+              >
+                Skills
+              </ListItems>
+            </Anchor>
+
+            <Anchor href="#contacts">
+              <ListItems
+                className="btn"
+                font={color}
+                color={mode ? "black" : "white"}
+              >
+                Contact
+              </ListItems>
+            </Anchor>
           </List>
         </LinksContainer>
         <ButtonContainer>
-          <Button background="transparent">Download CV</Button>
+          <Button
+            background="transparent"
+            font={color}
+            color={mode ? "black" : "white"}
+          >
+            Download CV
+          </Button>
         </ButtonContainer>
       </NavContainer>
 
       <SideNav className={active ? "active" : ""}>
         <NavLinks>
-          <SideItem>
-            <FaHome style={{ color: "white", marginRight: "10px" }} />
-            Home
-          </SideItem>
-          <SideItem>
-            <BsFillPersonFill style={{ color: "white", marginRight: "10px" }} />
-            About
-          </SideItem>
-          <SideItem>
-            <BsFolderFill style={{ color: "white", marginRight: "10px" }} />
-            Projects
-          </SideItem>
-          <SideItem>
-            <GiBrain style={{ color: "white", marginRight: "10px" }} />
-            Skills
-          </SideItem>
-          <SideItem>
-            <MdContactPhone style={{ color: "white", marginRight: "10px" }} />
-            Contact
-          </SideItem>
-          <ExtraSideItem>
-            <FaDownload style={{ color: "white", marginRight: "10px" }} />
-            Download CV
-          </ExtraSideItem>
+          <Anchor href="#">
+            <SideItem color={mode ? "black" : "white"}>
+              <FaHome style={{ color: "white", marginRight: "10px" }} />
+              Home
+            </SideItem>
+          </Anchor>
+
+          <Anchor href="#about">
+            <SideItem color={mode ? "black" : "white"}>
+              <BsFillPersonFill
+                style={{ color: "white", marginRight: "10px" }}
+              />
+              About
+            </SideItem>
+          </Anchor>
+
+          <Anchor href="#projects">
+            <SideItem color={mode ? "black" : "white"}>
+              <BsFolderFill style={{ color: "white", marginRight: "10px" }} />
+              Projects
+            </SideItem>
+          </Anchor>
+
+          <Anchor href="#tools">
+            <SideItem color={mode ? "black" : "white"}>
+              <GiBrain style={{ color: "white", marginRight: "10px" }} />
+              Skills
+            </SideItem>
+          </Anchor>
+
+          <Anchor href="#contacts">
+            <SideItem color={mode ? "black" : "white"}>
+              <MdContactPhone style={{ color: "white", marginRight: "10px" }} />
+              Contact
+            </SideItem>
+          </Anchor>
+
+          <Anchor href="#home">
+            <ExtraSideItem color={mode ? "black" : "white"}>
+              <FaDownload style={{ color: "white", marginRight: "10px" }} />
+              Download CV
+            </ExtraSideItem>
+          </Anchor>
         </NavLinks>
       </SideNav>
     </>

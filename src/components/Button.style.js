@@ -4,13 +4,13 @@ export const Button = styled.button`
   width: 150px;
   height: 40px;
   background: ${(props) => props.background};
-  border: 1px solid orange;
+  border: 1px solid ${(props) => props.color};
   border-radius: 25px;
-  color: white;
+  color: ${(props) => props.color};
   cursor: pointer;
 
   &:hover {
-    color: white;
-    background: yellow;
+    color: ${(props) => props.color};
+    background: ${(props) => props.font};
   }
 `;
