@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles.styles";
 
 // Icons
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode, MdColorLens } from "react-icons/md";
 
 const Container = styled.div`
   width: 100vw;
@@ -105,7 +105,9 @@ function App() {
           <ColorIcon
             onClick={() => setColorActive(colorActive === false ? true : false)}
           >
-            <Button>Color</Button>
+            <MdColorLens
+              style={{ color: mode ? "black" : "white", fontSize: "25px" }}
+            />
           </ColorIcon>
         </IconContainer>
 
