@@ -111,14 +111,12 @@ function App() {
           </ColorIcon>
         </IconContainer>
 
-        {/* {showColor && ( */}
         <ColorBox className={colorActive ? "active" : ""}>
           <Color background="red" onClick={() => setColorIndex(1)} />
           <Color background="violet" onClick={() => setColorIndex(2)} />
           <Color background="cyan" onClick={() => setColorIndex(3)} />
           <Color background="orange" onClick={() => setColorIndex(4)} />
         </ColorBox>
-        {/* )} */}
       </SideEffect>
 
       <GlobalStyles />

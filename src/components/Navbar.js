@@ -276,13 +276,15 @@ function Navbar({ active, setActive, mode, colorIndex }) {
           </List>
         </LinksContainer>
         <ButtonContainer>
-          <Button
-            background="transparent"
-            font={color}
-            color={mode ? "black" : "white"}
-          >
-            Download CV
-          </Button>
+          <Anchor href="./RichardOseiAmpah.pdf" download>
+            <Button
+              background="transparent"
+              font={color}
+              color={mode ? "black" : "white"}
+            >
+              Download CV
+            </Button>
+          </Anchor>
         </ButtonContainer>
       </NavContainer>
 
