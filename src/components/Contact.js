@@ -78,8 +78,14 @@ const Item = styled.div`
 `;
 
 const ItemText = styled.p`
+  flex: 1;
   color: ${(props) => props.color};
   font-weight: 400;
+
+  &:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid black;
+  }
 `;
 
 const Anchor = styled.a`
@@ -90,19 +96,19 @@ function Contact({ mode, colorIndex }) {
   let color = "";
   switch (colorIndex) {
     case 1:
-      color = "red";
+      color = "#ce6464";
       break;
     case 2:
-      color = "violet";
+      color = "#ceb464";
       break;
     case 3:
-      color = "cyan";
+      color = "#6fce64";
       break;
     case 4:
-      color = "orange";
+      color = "#6480ce";
       break;
     default:
-      color = "red";
+      color = "#ce6464";
   }
 
   return (
@@ -123,7 +129,7 @@ function Contact({ mode, colorIndex }) {
 
         <Anchor href="mailto:rickoseiampah@gmail.com">
           <Item>
-            <IoMdMail style={{ marginRight: "15px", color: color }} />
+            <IoMdMail style={{ marginRight: "10px", color: color }} />
             <ItemText color={mode ? "black" : "white"}>
               Rickoseiampah@gmail.com
             </ItemText>

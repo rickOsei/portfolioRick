@@ -113,9 +113,9 @@ function App() {
 
         <ColorBox className={colorActive ? "active" : ""}>
           <Color background="red" onClick={() => setColorIndex(1)} />
-          <Color background="violet" onClick={() => setColorIndex(2)} />
-          <Color background="cyan" onClick={() => setColorIndex(3)} />
-          <Color background="orange" onClick={() => setColorIndex(4)} />
+          <Color background="yellow" onClick={() => setColorIndex(2)} />
+          <Color background="green" onClick={() => setColorIndex(3)} />
+          <Color background="blue" onClick={() => setColorIndex(4)} />
         </ColorBox>
       </SideEffect>
 

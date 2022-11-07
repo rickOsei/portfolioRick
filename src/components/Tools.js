@@ -99,19 +99,19 @@ function Tools({ mode, colorIndex }) {
   let color = "";
   switch (colorIndex) {
     case 1:
-      color = "red";
+      color = "#ce6464";
       break;
     case 2:
-      color = "violet";
+      color = "#ceb464";
       break;
     case 3:
-      color = "cyan";
+      color = "#6fce64";
       break;
     case 4:
-      color = "orange";
+      color = "#6480ce";
       break;
     default:
-      color = "red";
+      color = "#ce6464";
   }
 
   return (
