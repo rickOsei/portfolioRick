@@ -84,7 +84,6 @@ const ItemText = styled.p`
 
   &:hover {
     transform: scale(1.1);
-    border-bottom: 1px solid black;
   }
 `;
 
