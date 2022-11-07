@@ -524,9 +524,9 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href=""></Anchor>
+                <Anchor href="https://lafashion.vercel.app/"></Anchor>
                 <OverlayButton>Preview</OverlayButton>
-                <Anchor href=""></Anchor>
+                <Anchor href="https://github.com/rickOsei/e-commerce-site"></Anchor>
                 <OverlayButton>Github Repo</OverlayButton>
               </OverlayButtonContainer>
             </OverlayContent>
