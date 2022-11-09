@@ -210,7 +210,13 @@ function Home({ setActive, mode, colorIndex }) {
           beautiful and engaging web designs, and also, I love what I do.
         </About>
         <Anchor href="./CV.pdf" download>
-          <Button background={color}>More About Me</Button>
+          <Button
+            background={color}
+            color={mode ? "black" : "white"}
+            font="transparent"
+          >
+            More About Me
+          </Button>
         </Anchor>
       </Desc>
       <Photo color={color}>
