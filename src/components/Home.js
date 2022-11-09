@@ -126,6 +126,10 @@ const Photo = styled.div`
   }
 `;
 
+const Anchor = styled.a`
+  text-decoration: none;
+`;
+
 const ProfileIcon = styled.img`
   width: 100%;
   height: 100%;
@@ -190,7 +194,7 @@ function Home({ setActive, mode, colorIndex }) {
         setIndex(index + 1);
       }, 100);
     }
-  }, [index]);
+  }, [index, text, fullText]);
 
   return (
     <Container onClick={() => setActive(false)} id="about">
@@ -205,7 +209,9 @@ function Home({ setActive, mode, colorIndex }) {
           A diligent and passionate web developer with experience in creating
           beautiful and engaging web designs, and also, I love what I do.
         </About>
-        <Button background={color}>More About Me</Button>
+        <Anchor href="./CV.pdf" download>
+          <Button background={color}>More About Me</Button>
+        </Anchor>
       </Desc>
       <Photo color={color}>
         <ProfileIcon src={ProfilePic} />

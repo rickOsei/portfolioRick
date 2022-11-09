@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import LogoBlack from "../image/portfolioLogoBlack.png";
 import Logo from "../image/portfolioLogo.png";
@@ -276,7 +276,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
           </List>
         </LinksContainer>
         <ButtonContainer>
-          <Anchor href="./RichardOseiAmpah.pdf" download>
+          <Anchor href="./CV.pdf" download>
             <Button
               background="transparent"
               font={color}
@@ -327,7 +327,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
             </SideItem>
           </Anchor>
 
-          <Anchor href="#home">
+          <Anchor href="./CV.pdf" download>
             <ExtraSideItem color={mode ? "black" : "white"}>
               <FaDownload style={{ color: "white", marginRight: "10px" }} />
               Download CV

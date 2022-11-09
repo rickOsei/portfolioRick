@@ -135,7 +135,7 @@ function Contact({ mode, colorIndex }) {
           </Item>
         </Anchor>
 
-        <Anchor href="https://www.linkedin.com/in/richard-osei-ampah-a182801ba/">
+        <Anchor href="https://www.linkedin.com/in/rickosei/">
           <Item>
             <BsLinkedin style={{ marginRight: "15px", color: color }} />
             <ItemText color={mode ? "black" : "white"}>
