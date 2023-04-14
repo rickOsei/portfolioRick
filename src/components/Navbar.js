@@ -276,7 +276,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
           </List>
         </LinksContainer>
         <ButtonContainer>
-          <Anchor href="./CV.pdf" download>
+          <Anchor href="./Osei_Richard_Ampah_CV2.pdf" download>
             <Button
               background="transparent"
               font={color}
