@@ -386,10 +386,10 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href="https://calcus.vercel.app/"></Anchor>
+                <Anchor href="https://restaurant-review-brown.vercel.app/"></Anchor>
                 <OverlayButton>Preview</OverlayButton>
 
-                <Anchor href="https://github.com/rickOsei/Functional-Calculator"></Anchor>
+                <Anchor href="https://github.com/rickOsei/restaurant_review"></Anchor>
                 <OverlayButton>Github Repo</OverlayButton>
               </OverlayButtonContainer>
             </OverlayContent>
