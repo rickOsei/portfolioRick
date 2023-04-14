@@ -1,17 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import Htmllogo from "../image/tools/html.png";
-import Csslogo from "../image/tools/css.png";
-import javascriptlogo from "../image/tools/js.png";
-import bootstraplogo from "../image/tools/bs.png";
-import photoshop from "../image/tools/ps.png";
-import reactlogo from "../image/tools/react.png";
-import gitlogo from "../image/tools/git.png";
-import reduxlogo from "../image/tools/redux.png";
-import firebaselogo from "../image/tools/firebase.png";
-import vslogo from "../image/tools/vs.png";
-import githublogo from "../image/tools/github.png";
-import githubwhitelogo from "../image/tools/github2.png";
+// import Htmllogo from "../image/tools/html.png";
+// import Csslogo from "../image/tools/css.png";
+// import javascriptlogo from "../image/tools/js.png";
+// import bootstraplogo from "../image/tools/bs.png";
+// import photoshop from "../image/tools/ps.png";
+// import reactlogo from "../image/tools/react.png";
+// import gitlogo from "../image/tools/git.png";
+// import reduxlogo from "../image/tools/redux.png";
+// import firebaselogo from "../image/tools/firebase.png";
+// import vslogo from "../image/tools/vs.png";
+// import githublogo from "../image/tools/github.png";
+// import githubwhitelogo from "../image/tools/github2.png";
+import {
+  mongodblogo,
+  nodejslogo,
+  tailwindlogo,
+  Htmllogo,
+  Csslogo,
+  javascriptlogo,
+  photoshop,
+  reactlogo,
+  githublogo,
+  gitlogo,
+  githubwhitelogo,
+  vslogo,
+  firebaselogo,
+  reduxlogo,
+  bootstraplogo,
+  expressjslogo,
+} from "../images";
 
 const Container = styled.div`
   width: 100vw;
@@ -95,6 +113,21 @@ const Tool = styled.img`
   }
 `;
 
+const ToolSmaller = styled.img`
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: 769px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    width: 130px;
+    height: 130px;
+  }
+`;
+
 function Tools({ mode, colorIndex }) {
   let color = "";
   switch (colorIndex) {
@@ -122,17 +155,22 @@ function Tools({ mode, colorIndex }) {
         products:
       </Description>
       <ToolsContainer>
-        <Tool src={Htmllogo} />
-        <Tool src={Csslogo} />
+        {/* <Tool src={Htmllogo} />
+        <Tool src={Csslogo} /> */}
         <Tool src={javascriptlogo} />
         <Tool src={bootstraplogo} />
         <Tool src={photoshop} />
+        <ToolSmaller src={mongodblogo} />
+        <Tool src={expressjslogo} />
         <Tool src={reactlogo} />
+        <ToolSmaller src={nodejslogo} />
         <Tool src={reduxlogo} />
         <Tool src={gitlogo} />
         <Tool src={mode ? githublogo : githubwhitelogo} />
         <Tool src={vslogo} />
         <Tool src={firebaselogo} />
+
+        <Tool src={tailwindlogo} />
       </ToolsContainer>
     </Container>
   );

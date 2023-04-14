@@ -8,6 +8,7 @@ import parallax from "../image/projects/parallax.png";
 import imageCollection from "../image/projects/imageCollection.png";
 import game from "../image/projects/rockpaperscissors.png";
 import todolist from "../image/projects/todolist.png";
+import restaurant from "../image/projects/restaurant.png";
 
 // ICONS
 import {
@@ -17,6 +18,11 @@ import {
   SiReact,
   SiFirebase,
   SiBootstrap,
+  SiMongodb,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiTypescript,
+  SiExpress,
 } from "react-icons/si";
 
 const Container = styled.section`
@@ -294,7 +300,7 @@ function Projects({ mode, colorIndex }) {
           </Overlay>
         </Card>
 
-        <Card shadow="2px 2px 2px 2px rgb(94, 93, 93);">
+        {/* <Card shadow="2px 2px 2px 2px rgb(94, 93, 93);">
           <CardImage src={calcus} />
           <Overlay>
             <OverlayContent>
@@ -318,6 +324,60 @@ function Projects({ mode, colorIndex }) {
                   }}
                 />
                 <SiJavascript
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </OverlayTools>
+              <OverlayButtonContainer>
+                <Anchor href="https://calcus.vercel.app/"></Anchor>
+                <OverlayButton>Preview</OverlayButton>
+
+                <Anchor href="https://github.com/rickOsei/Functional-Calculator"></Anchor>
+                <OverlayButton>Github Repo</OverlayButton>
+              </OverlayButtonContainer>
+            </OverlayContent>
+          </Overlay>
+        </Card> */}
+
+        <Card shadow="2px 2px 2px 2px rgb(94, 93, 93);">
+          <CardImage src={restaurant} />
+          <Overlay>
+            <OverlayContent>
+              <OverlayTitle color={color}>Review Website</OverlayTitle>
+              <OverlayText>A MERN stack restaurant review website</OverlayText>
+              <OverlayTools>
+                <SiMongodb
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiExpress
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiReact
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiNodedotjs
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiCss3
                   style={{
                     color: "gray",
                     fontSize: "20px",
