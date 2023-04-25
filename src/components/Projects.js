@@ -7,6 +7,7 @@ import ecommerce from "../image/projects/ecommerce.png";
 import parallax from "../image/projects/parallax.png";
 import imageCollection from "../image/projects/imageCollection.png";
 import game from "../image/projects/rockpaperscissors.png";
+import { pokebookLogo } from "../images";
 import todolist from "../image/projects/todolist.png";
 import restaurant from "../image/projects/restaurant.png";
 
@@ -289,12 +290,13 @@ function Projects({ mode, colorIndex }) {
               </OverlayTools>
               <OverlayButtonContainer>
                 <Anchor href="https://fitnesstwo.vercel.app/">
-                  {" "}
                   <OverlayButton>Preview</OverlayButton>
                 </Anchor>
 
-                <Anchor href="https://github.com/rickOsei/Fitness"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
+                <Anchor href="https://github.com/rickOsei/Fitness">
+                  {" "}
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
               </OverlayButtonContainer>
             </OverlayContent>
           </Overlay>
@@ -386,11 +388,14 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href="https://restaurant-review-brown.vercel.app/"></Anchor>
-                <OverlayButton>Preview</OverlayButton>
+                <Anchor href="https://restaurant-review-brown.vercel.app/">
+                  {" "}
+                  <OverlayButton>Preview</OverlayButton>
+                </Anchor>
 
-                <Anchor href="https://github.com/rickOsei/restaurant_review"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
+                <Anchor href="https://github.com/rickOsei/restaurant_review">
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
               </OverlayButtonContainer>
             </OverlayContent>
           </Overlay>
@@ -429,29 +434,29 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href="https://fanta-flipping.netlify.app/"></Anchor>
-                <OverlayButton>Preview</OverlayButton>
+                <Anchor href="https://fanta-flipping.netlify.app/">
+                  {" "}
+                  <OverlayButton>Preview</OverlayButton>
+                </Anchor>
 
-                <Anchor href="https://github.com/rickOsei/color-flipper"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
+                <Anchor href="https://github.com/rickOsei/color-flipper">
+                  {" "}
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
               </OverlayButtonContainer>
             </OverlayContent>
           </Overlay>
         </Card>
         <Card shadow="2px 2px 2px 2px rgba(128, 128, 128, 0.8);">
-          <CardImage src={game} />
+          <CardImage src={pokebookLogo} />
           <Overlay>
             <OverlayContent>
-              <OverlayTitle color={color}>Rock Paper Scissors</OverlayTitle>
-              <OverlayText>A classic rock, papaer,scissors game.</OverlayText>
+              <OverlayTitle color={color}>PokeBook</OverlayTitle>
+              <OverlayText>
+                Largest Pokémon index with information about every Pokemon you
+                can think of.
+              </OverlayText>
               <OverlayTools>
-                <SiHtml5
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
                 <SiCss3
                   style={{
                     color: "gray",
@@ -459,7 +464,7 @@ function Projects({ mode, colorIndex }) {
                     marginRight: "10px",
                   }}
                 />
-                <SiJavascript
+                <SiReact
                   style={{
                     color: "gray",
                     fontSize: "20px",
@@ -468,11 +473,15 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href="https://rockpaperscissors-zeta.vercel.app/"></Anchor>
-                <OverlayButton>Preview</OverlayButton>
+                <Anchor href="https://pokebook-psi.vercel.app/">
+                  {" "}
+                  <OverlayButton>Preview</OverlayButton>
+                </Anchor>
 
-                <Anchor href="https://github.com/rickOsei/Rock_Paper_Scissors"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
+                <Anchor href="https://github.com/rickOsei/Pokebook">
+                  {" "}
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
               </OverlayButtonContainer>
             </OverlayContent>
           </Overlay>
@@ -584,10 +593,14 @@ function Projects({ mode, colorIndex }) {
                 />
               </OverlayTools>
               <OverlayButtonContainer>
-                <Anchor href="https://lafashion.vercel.app/"></Anchor>
-                <OverlayButton>Preview</OverlayButton>
-                <Anchor href="https://github.com/rickOsei/e-commerce-site"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
+                <Anchor href="https://lafashion.vercel.app/">
+                  {" "}
+                  <OverlayButton>Preview</OverlayButton>
+                </Anchor>
+
+                <Anchor href="https://github.com/rickOsei/e-commerce-site">
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
               </OverlayButtonContainer>
             </OverlayContent>
           </Overlay>

@@ -18,3 +18,4 @@ export { default as githublogo } from "./image/tools/github.png";
 export { default as githubwhitelogo } from "./image/tools/github2.png";
 export { default as bootstraplogo } from "./image/tools/bs.png";
 export { default as expressjslogo } from "./image/tools/expressjs.png";
+export { default as pokebookLogo } from "./image/projects/pokedex.png";
