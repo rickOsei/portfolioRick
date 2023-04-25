@@ -146,7 +146,7 @@ const ListItems = styled.li`
   }
 
   &:hover {
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid ${(props) => props.borderColor};
   }
 
   &.active {
@@ -229,6 +229,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
                 className="btn"
                 font={color}
                 color={mode ? "black" : "white"}
+                borderColor={color}
               >
                 Home
               </ListItems>
@@ -239,6 +240,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
                 className="btn"
                 font={color}
                 color={mode ? "black" : "white"}
+                borderColor={color}
               >
                 About
               </ListItems>
@@ -249,6 +251,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
                 className="btn"
                 font={color}
                 color={mode ? "black" : "white"}
+                borderColor={color}
               >
                 Projects
               </ListItems>
@@ -259,6 +262,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
                 className="btn"
                 font={color}
                 color={mode ? "black" : "white"}
+                borderColor={color}
               >
                 Skills
               </ListItems>
@@ -269,6 +273,7 @@ function Navbar({ active, setActive, mode, colorIndex }) {
                 className="btn"
                 font={color}
                 color={mode ? "black" : "white"}
+                borderColor={color}
               >
                 Contact
               </ListItems>
