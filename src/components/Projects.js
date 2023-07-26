@@ -4,9 +4,7 @@ import fitness from "../image/projects/fitness.png";
 import calcus from "../image/projects/Calcus.png";
 import fanta from "../image/projects/fanta.png";
 import ecommerce from "../image/projects/ecommerce.png";
-import parallax from "../image/projects/parallax.png";
-import imageCollection from "../image/projects/imageCollection.png";
-import game from "../image/projects/rockpaperscissors.png";
+import cedirates from "../image/projects/cedirates2.png";
 import { pokebookLogo } from "../images";
 import todolist from "../image/projects/todolist.png";
 import restaurant from "../image/projects/restaurant.png";
@@ -255,8 +253,65 @@ function Projects({ mode, colorIndex }) {
           portfolio with more projects as I learn and gain new skills every day.
         </Description>
       </Heading>
-
       <CardContainer>
+        <Card shadow="2px 2px 2px 2px rgba(128, 128, 128, 0.8);">
+          <CardImage src={cedirates} />
+          <Overlay>
+            <OverlayContent>
+              <OverlayTitle color={color}>Cedirates Website</OverlayTitle>
+              <OverlayText>
+                A website providing updated fuel prices and exchange rates as
+                well as historical data on the respective pices and rates.
+              </OverlayText>
+              <OverlayTools>
+                <SiMongodb
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiExpress
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiReact
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiNodedotjs
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+                <SiCss3
+                  style={{
+                    color: "gray",
+                    fontSize: "20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </OverlayTools>
+              <OverlayButtonContainer>
+                <Anchor href="https://cedirates.com/">
+                  <OverlayButton>Preview</OverlayButton>
+                </Anchor>
+
+                <Anchor href="">
+                  <OverlayButton>Github Repo</OverlayButton>
+                </Anchor>
+              </OverlayButtonContainer>
+            </OverlayContent>
+          </Overlay>
+        </Card>
         <Card shadow="2px 2px 2px 2px rgba(128, 128, 128, 0.8);">
           <CardImage src={fitness} />
           <Overlay>
@@ -301,49 +356,6 @@ function Projects({ mode, colorIndex }) {
             </OverlayContent>
           </Overlay>
         </Card>
-
-        {/* <Card shadow="2px 2px 2px 2px rgb(94, 93, 93);">
-          <CardImage src={calcus} />
-          <Overlay>
-            <OverlayContent>
-              <OverlayTitle color={color}>Calculator</OverlayTitle>
-              <OverlayText>
-                A fully functional calculator with vanilla javascript.
-              </OverlayText>
-              <OverlayTools>
-                <SiHtml5
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiCss3
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiJavascript
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-              </OverlayTools>
-              <OverlayButtonContainer>
-                <Anchor href="https://calcus.vercel.app/"></Anchor>
-                <OverlayButton>Preview</OverlayButton>
-
-                <Anchor href="https://github.com/rickOsei/Functional-Calculator"></Anchor>
-                <OverlayButton>Github Repo</OverlayButton>
-              </OverlayButtonContainer>
-            </OverlayContent>
-          </Overlay>
-        </Card> */}
-
         <Card shadow="2px 2px 2px 2px rgb(94, 93, 93);">
           <CardImage src={restaurant} />
           <Overlay>
@@ -480,65 +492,6 @@ function Projects({ mode, colorIndex }) {
 
                 <Anchor href="https://github.com/rickOsei/Pokebook">
                   {" "}
-                  <OverlayButton>Github Repo</OverlayButton>
-                </Anchor>
-              </OverlayButtonContainer>
-            </OverlayContent>
-          </Overlay>
-        </Card>
-
-        <Card shadow="2px 2px 2px 2px rgba(128, 128, 128, 0.8);">
-          <CardImage src={todolist} />
-          <Overlay>
-            <OverlayContent>
-              <OverlayTitle color={color}>TodoList</OverlayTitle>
-              <OverlayText>
-                A todolist app created with React the frontend and Firebase for
-                backend.
-              </OverlayText>
-              <OverlayTools>
-                <SiHtml5
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiCss3
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiJavascript
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiReact
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-                <SiFirebase
-                  style={{
-                    color: "gray",
-                    fontSize: "20px",
-                    marginRight: "10px",
-                  }}
-                />
-              </OverlayTools>
-              <OverlayButtonContainer>
-                <Anchor href="https://todolist-psi-nine.vercel.app/">
-                  <OverlayButton>Preview</OverlayButton>
-                </Anchor>
-
-                <Anchor href="https://github.com/rickOsei/todolist_React">
                   <OverlayButton>Github Repo</OverlayButton>
                 </Anchor>
               </OverlayButtonContainer>
