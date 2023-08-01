@@ -209,7 +209,7 @@ function Home({ setActive, mode, colorIndex }) {
           A diligent and passionate web developer with experience in creating
           beautiful and engaging web designs, and also, I love what I do.
         </About>
-        <Anchor href="./Osei_Richard_Ampah_Resume.pdf" download>
+        <Anchor href="./Osei-Richard-Ampah-CV.pdf" download>
           <Button
             background={color}
             color={mode ? "black" : "white"}
