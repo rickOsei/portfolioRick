@@ -71,7 +71,9 @@ const Navbar = () => {
             ></div>
           </div>
           <div className="color-mode" onClick={handleClick}>
-            <VscColorMode className={currentMode === "dark" && "dark-text"} />
+            <VscColorMode
+              className={currentMode === "dark" ? "dark-icon" : "mode-icon"}
+            />
           </div>
         </div>
       </div>

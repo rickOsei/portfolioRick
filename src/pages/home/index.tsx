@@ -24,16 +24,19 @@ const Home = () => {
           aperiam?
         </p>
 
-        <div className="w-full flex flex-row justify-start mt-10">
-          <p className={currentMode === "dark" ? "dark-text" : ""}>
+        <div className="w-full flex flex-row justify-start mt-10 text-secondaryColor">
+          <p
+          // className={currentMode === "dark" ? "dark-text" : ""}
+          >
             Get to know more
           </p>
           <span
-            className={
-              currentMode === "dark"
-                ? "pointing-arrow  dark-text"
-                : "pointing-arrow "
-            }
+            // className={
+            //   currentMode === "dark"
+            //     ? "pointing-arrow  dark-text"
+            //     : "pointing-arrow "
+            // }
+            className="pointing-arrow"
           >
             <BsArrowRight />
           </span>

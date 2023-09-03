@@ -12,7 +12,7 @@ export default {
       colors: {
         paragraphColor: "#717273",
         mediaSVGColor: "#545454",
-        bgColor: "#f5f5f558",
+        secondaryColor: "#73bdda",
       },
     },
   },

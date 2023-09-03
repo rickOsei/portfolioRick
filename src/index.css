@@ -28,7 +28,9 @@
   --clr-bg-dark-0: #000;
   --clr-bg-light-0: #000;
   --clr-text-1: #4f4f4f;
-  --clr-paragraph-2: #4f4f4f;
+  --clr-secondary-color: #73bdda;
+  --clr-dark-primary: #0a192f;
+  --clr-dark-secondary: #ccd6f6;
   --clr-text-3: hsl(213, 97%, 15%);
   --clr-text-4: hsl(212, 96%, 10%);
 }
@@ -74,28 +76,6 @@ p {
   height: 100vh;
   transition: all 0.5s ease-in-out;
   z-index: -1;
-}
-
-.dark-bg {
-  background: #0a192f;
-}
-
-.dark-text {
-  color: #ccd6f6;
-}
-
-.dark-line {
-  background: #ccd6f6;
-  margin-top: 5px;
-  height: 1px;
-  width: 0%;
-  transition: width 1s ease;
-}
-
-.dark-horizontal {
-  background: #ccd6f6;
-  height: 35%;
-  width: 1.5px;
 }
 
 .main-page-layout::before {
@@ -174,7 +154,7 @@ p {
   cursor: pointer;
 }
 
-.color-mode svg {
+.mode-icon {
   font-size: 25px;
   color: black;
 }
@@ -193,7 +173,7 @@ p {
 
 .social-media svg:hover,
 .email-address p:hover {
-  color: #5f8cff;
+  color: var(--clr-secondary-color);
   transform: translateY(-2px);
 }
 
@@ -213,6 +193,35 @@ p {
   height: 35%;
   width: 1.5px;
   background: #4f4f4f;
+}
+
+/* dark mode */
+
+.dark-bg {
+  background: var(--clr-dark-primary);
+}
+
+.dark-text {
+  color: var(--clr-dark-secondary);
+}
+
+.dark-line {
+  background: var(--clr-dark-secondary);
+  margin-top: 5px;
+  height: 1px;
+  width: 0%;
+  transition: width 1s ease;
+}
+
+.dark-horizontal {
+  background: var(--clr-dark-secondary);
+  height: 35%;
+  width: 1.5px;
+}
+
+.dark-icon {
+  font-size: 25px;
+  color: var(--clr-dark-secondary);
 }
 
 @keyframes gradient {
