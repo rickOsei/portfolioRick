@@ -3,6 +3,7 @@ import SocialMedia from "../../components/SocialMedia";
 import EmailComponent from "../../components/EmailComponent";
 import { StateType } from "../RootLayer";
 import { useSelector } from "react-redux";
+import GlitchingTitleComponent from "../../components/GlitchingTitleComponent";
 
 const Home = () => {
   const {
@@ -10,19 +11,30 @@ const Home = () => {
   } = useSelector((state: StateType) => state);
 
   return (
-    <section className="w-full relative mx-auto py-4 flex  justify-center items-center">
+    <section className="w-full relative mx-auto py-4 flex flex-col justify-center items-center lg:flex-row">
       <SocialMedia />
       <div className="main-content w-full px-4 flex flex-col justify-between items-center sm:px-10 md:max-w-4xl md:px-14">
-        <p className={currentMode === "dark" ? "dark-text" : ""}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          asperiores veritatis rem dolor provident exercitationem, maiores
-          distinctio, rerum architecto illum hic incidunt numquam possimus qui
-          consectetur, eos ab officiis aspernatur! Iste cumque praesentium
-          inventore, consequatur quaerat eligendi aliquam placeat, numquam
-          itaque ratione illum porro labore soluta quidem nesciunt molestias.
-          Sunt illum voluptatum hic sed eligendi. Eveniet nam quidem dignissimos
-          aperiam?
-        </p>
+        <GlitchingTitleComponent />
+        <div className={currentMode === "dark" ? "dark-text" : "flex flex-col"}>
+          <p className="my-2">Frontend Developer | MERN Enthusiast</p>
+          <p className="my-2">
+            I'm passionate about crafting delightful web experiences, seamlessly
+            blending design and functionality. When I'm not coding, you can find
+            me exploring the world of technology, catching up on the latest tech
+            trends, and seeking innovative solutions.
+          </p>
+          <p className="my-2 hidden lg:block">
+            Beyond the digital realm, I'm an advocate of minimalism and order,
+            finding beauty in simplicity. In my downtime, I enjoy staying
+            active, playing sports, and being part of the excitement.
+          </p>
+
+          <p className="my-2">
+            Join me on this journey of web development innovation and
+            creativity. Together, we can turn your ideas into exceptional
+            digital experiences.
+          </p>
+        </div>
 
         <div className="w-full flex flex-row justify-start mt-10 text-secondaryColor">
           <p
@@ -43,6 +55,7 @@ const Home = () => {
         </div>
       </div>
       <EmailComponent />
+      <div className="dummy-space w-full h-14 lg:hidden"></div>
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/logo-r-b.svg";
-import LogoWhite from "../../assets/logo-white-bg.svg";
+import LogoWhite from "../../assets/logo-symbol-r.png";
 import { VscColorMode } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../../features/modeSwitch";

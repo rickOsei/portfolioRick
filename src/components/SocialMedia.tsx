@@ -1,5 +1,10 @@
-import { FiTwitter, FiLinkedin, FiInstagram, FiGithub } from "react-icons/fi";
-import { BsFillEnvelopeFill } from "react-icons/bs";
+import {
+  FiTwitter,
+  FiLinkedin,
+  FiInstagram,
+  FiGithub,
+  FiMail,
+} from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { StateType } from "../pages/RootLayer";
 
@@ -22,14 +27,18 @@ const SocialMedia = () => {
         ></div>
       </div>
 
-      <div className="social-media w-full flex flex-row justify-center items-center py-5 space-x-8 bg-bgColor lg:hidden ">
+      <div
+        className={
+          currentMode === "dark"
+            ? "social-media-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorDark space-x-8 lg:hidden"
+            : "social-media-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorLight space-x-8 lg:hidden"
+        }
+      >
         <FiTwitter className={currentMode === "dark" ? "dark-text" : ""} />
         <FiGithub className={currentMode === "dark" ? "dark-text" : ""} />
         <FiLinkedin className={currentMode === "dark" ? "dark-text" : ""} />
         <FiInstagram className={currentMode === "dark" ? "dark-text" : ""} />
-        <BsFillEnvelopeFill
-          className={currentMode === "dark" ? "dark-text" : ""}
-        />
+        <FiMail className={currentMode === "dark" ? "dark-text" : ""} />
         <div className="horizontal-line"></div>
       </div>
     </>

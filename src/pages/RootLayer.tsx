@@ -21,7 +21,7 @@ const RootLayer = () => {
           : "main-page-layout dark-bg"
       }
     >
-      <header className="py-14 main-header">
+      <header className="py-5 main-header md:py-14">
         <Navbar />
       </header>
       <div className="main-section">

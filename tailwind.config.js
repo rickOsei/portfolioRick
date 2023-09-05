@@ -10,9 +10,9 @@ export default {
     },
     extend: {
       colors: {
-        paragraphColor: "#717273",
-        mediaSVGColor: "#545454",
-        secondaryColor: "#73bdda",
+        secondaryColor: "#52d3b9",
+        bgColorLight: "#f4faf9a0",
+        bgColorDark: "#050e1d9f",
       },
     },
   },
