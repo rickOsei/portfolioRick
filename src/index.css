@@ -12,7 +12,7 @@
 
   color-scheme: light dark;
   color: #000;
-  background-color: #fff;
+  background-color: #fffdfc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -41,7 +41,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   background: #fffdfc;
   color: var(--clr-text-1);
 }
@@ -55,10 +55,16 @@ p {
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 11.5px;
-  line-height: 30px;
+  line-height: 28px;
 }
 
 @media screen and (min-width: 768px) {
+  p {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   p {
     font-size: 13.5px;
   }
@@ -66,35 +72,41 @@ p {
 
 /* Global Styles */
 
+.main-header,
+.main-section {
+  position: relative;
+  z-index: 2;
+}
+
 .main-page-layout {
   display: block;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   transition: all 0.5s ease-in-out;
   z-index: -1;
 }
 
 .main-page-layout::before {
   content: "";
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   z-index: 1;
   position: fixed;
-  opacity: 0.04;
+  opacity: 0.07;
 
   background-color: #269;
-  background-image: linear-gradient(rgb(19, 19, 19) 2px, transparent 2px),
-    linear-gradient(90deg, rgb(15, 15, 15) 2px, transparent 2px),
-    linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-image: linear-gradient(rgb(19, 19, 19) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgb(15, 15, 15) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(255, 255, 255, 0.3) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0.5px, transparent 0.5px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 .main-page-layout::after {
   content: "";
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   z-index: 1;
   position: fixed;
   filter: blur(100px) saturate(100%);
@@ -106,14 +118,13 @@ p {
   -webkit-animation: gradient 15s ease infinite;
   animation: gradient 15s ease infinite;
 }
-
 .nav-link {
   cursor: pointer;
   padding: 10px 15px;
-  height: 100%;
+  height: 100vh;
   border: 2px solid transparent;
   transition: all 1s ease;
-  font-size: 14.5px;
+  font-size: 12.5px;
 }
 
 .line {
@@ -124,29 +135,14 @@ p {
   transition: width 1s ease;
 }
 
+/* Header */
+
 .nav-link-container:hover .line {
   width: 100%;
 }
 
 .nav-link-container:hover .dark-line {
   width: 100%;
-}
-
-.main-header,
-.main-section {
-  position: relative;
-  z-index: 2;
-}
-
-.pointing-arrow {
-  position: relative;
-  top: 10px;
-  padding: 0 7px;
-  animation: arrowMovement 2s ease infinite;
-}
-
-.pointing-arrow svg {
-  font-size: 18px;
 }
 
 .color-mode {
@@ -158,6 +154,66 @@ p {
 .mode-icon {
   font-size: 25px;
   color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* main section */
+
+.pointing-arrow {
+  position: relative;
+  top: 10px;
+  padding: 0 7px;
+  animation: arrowMovement 2s ease infinite;
+}
+
+.pointing-arrow svg {
+  font-size: 18px;
 }
 
 .social-media {
@@ -232,16 +288,18 @@ p {
 /* dark mode */
 
 .dark-bg {
+  width: 100%;
+  min-height: 100vh;
   background: var(--clr-dark-primary);
 }
 
 .dark-bg::before {
   content: "";
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   z-index: 1;
   position: fixed;
-  opacity: 0.008;
+  opacity: 0.01;
 
   background-color: #269;
   background-image: linear-gradient(rgb(239, 239, 239) 2px, transparent 2px),
@@ -294,6 +352,10 @@ p {
 
   .social-media svg {
     font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 13.5px;
   }
 }
 

@@ -5,6 +5,7 @@ import { VscColorMode } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../../features/modeSwitch";
 import { StateType } from "../../pages/RootLayer";
+import HamburgerComponent from "../HamburgerComponent";
 
 const Navbar = () => {
   const {
@@ -16,23 +17,33 @@ const Navbar = () => {
     dispatch(setMode());
   };
 
+  const handleTitleChange = (title: string): void => {
+    const pageTitle = title;
+    document.title = `${pageTitle} | Rick Osei`;
+  };
+
   return (
     <nav className="w-full relative mx-auto py-4 flex justify-center items-center">
       <div className="w-full px-3 flex justify-between items-center sm:px-10 md:max-w-5xl md:px-14">
-        <NavLink to="/" className="block p-1">
+        <NavLink
+          to="/"
+          className="block p-1"
+          onClick={() => handleTitleChange("Home")}
+        >
           <img
             src={currentMode === "light" ? Logo : LogoWhite}
             alt="logo"
             className="w-12 h-12"
           />
         </NavLink>
-        <div className="nav-links  hidden md:flex">
+        <div id="nav-links" className="nav-links  hidden md:flex">
           <div className="nav-link-container">
             <NavLink
               to="projects"
               className={
                 currentMode === "light" ? "nav-link" : "nav-link dark-text"
               }
+              onClick={() => handleTitleChange("Projects")}
             >
               Projects
             </NavLink>
@@ -47,6 +58,7 @@ const Navbar = () => {
               className={
                 currentMode === "light" ? "nav-link" : "nav-link dark-text"
               }
+              onClick={() => handleTitleChange("About")}
             >
               About
             </NavLink>
@@ -61,6 +73,7 @@ const Navbar = () => {
               className={
                 currentMode === "light" ? "nav-link" : "nav-link dark-text"
               }
+              onClick={() => handleTitleChange("Contact")}
             >
               Contact
             </NavLink>
@@ -74,6 +87,7 @@ const Navbar = () => {
             />
           </div>
         </div>
+        <HamburgerComponent />
       </div>
     </nav>
   );

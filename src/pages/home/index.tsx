@@ -15,21 +15,21 @@ const Home = () => {
       <SocialMedia />
       <div className="main-content w-full px-4 flex flex-col justify-between items-center sm:px-10 md:max-w-4xl md:px-14">
         <GlitchingTitleComponent />
-        <div className={currentMode === "dark" ? "dark-text" : "flex flex-col"}>
-          <p className="my-2">Frontend Developer | MERN Enthusiast</p>
-          <p className="my-2">
+        <div className={currentMode === "dark" ? "dark-text" : ""}>
+          <p className="mb-4 font-bold">Frontend Developer | MERN Enthusiast</p>
+          <p className="my-4">
             I'm passionate about crafting delightful web experiences, seamlessly
             blending design and functionality. When I'm not coding, you can find
             me exploring the world of technology, catching up on the latest tech
             trends, and seeking innovative solutions.
           </p>
-          <p className="my-2 hidden lg:block">
+          <p className="my-4 hidden lg:block">
             Beyond the digital realm, I'm an advocate of minimalism and order,
             finding beauty in simplicity. In my downtime, I enjoy staying
             active, playing sports, and being part of the excitement.
           </p>
 
-          <p className="my-2">
+          <p className="my-4">
             Join me on this journey of web development innovation and
             creativity. Together, we can turn your ideas into exceptional
             digital experiences.
