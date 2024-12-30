@@ -1,12 +1,13 @@
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -20,13 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --clr-bg-dark-0: #000;
+  --clr-bg-dark-0: #01081b;
   --clr-bg-light-0: #000;
   --clr-text-1: #4f4f4f;
   --clr-secondary-color: #52d3b9;
-  --clr-dark-primary: #0a192f;
-  --clr-dark-secondary: #ccd6f6;
-  --clr-white-primary: #cbcfdb;
+  --clr-dark-primary: #000000;
+  --clr-dark-secondary: #edfcf9;
+  --clr-dark-paragraph: #c5d0ce;
+  --clr-white-primary: #cbdbd8;
   --clr-dark-gradient-primary: hsl(213, 97%, 15%);
   --clr-dark-gradient-secondary: hsl(212, 96%, 10%);
 }
@@ -51,7 +53,6 @@ a {
 }
 
 p {
-  color: var(--clr-paragraph-2);
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 11.5px;
@@ -94,9 +95,10 @@ p {
   position: fixed;
   opacity: 0.07;
 
-  background-color: #269;
-  background-image: linear-gradient(rgb(19, 19, 19) 1.5px, transparent 1.5px),
-    linear-gradient(90deg, rgb(15, 15, 15) 1.5px, transparent 1.5px),
+  background-color: linear-gradient(to right, #fc354c, #0abfbc);
+  background: #8ad3d37e;
+  background-image: linear-gradient(rgb(19, 19, 19) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgb(15, 15, 15) 0.5px, transparent 0.5px),
     linear-gradient(rgba(255, 255, 255, 0.3) 0.5px, transparent 0.5px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0.5px, transparent 0.5px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
@@ -111,12 +113,22 @@ p {
   position: fixed;
   filter: blur(100px) saturate(100%);
   top: 0px;
-  opacity: 0.1;
+  opacity: 0.05;
   transform: translateZ(0px);
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-  animation: gradient 15s ease infinite;
+  background: #c6ffdd;
+  /* background-image: -webkit-linear-gradient(225deg, #f7797d, #c6ffdd, #fbd786); */
+  background: linear-gradient(
+    225deg,
+    #ff333a 0%,
+    #ff333a 15%,
+    #c6ffdd 40%,
+    #c6ffdd 70%,
+    #fbc340 85%,
+    #fbc340 100%
+  );
+  /* background-size: 400% 400%; */
+  /* -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
 }
 .nav-link {
   cursor: pointer;
@@ -153,7 +165,7 @@ p {
 
 .mode-icon {
   font-size: 25px;
-  color: black;
+  color: #262626;
 }
 
 /* Hamburger Menu */
@@ -206,8 +218,6 @@ p {
 /* main section */
 
 .pointing-arrow {
-  position: relative;
-  top: 10px;
   padding: 0 7px;
   animation: arrowMovement 2s ease infinite;
 }
@@ -234,7 +244,7 @@ p {
 .social-media svg {
   font-size: 18px;
   cursor: pointer;
-  transition: all 0.15 linear;
+  transition: transform 0.1s ease;
 }
 
 .social-media svg:hover,
@@ -276,7 +286,7 @@ p {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 15s linear infinite;
@@ -299,11 +309,11 @@ p {
   min-height: 100vh;
   z-index: 1;
   position: fixed;
-  opacity: 0.01;
+  opacity: 0.07;
 
-  background-color: #269;
-  background-image: linear-gradient(rgb(239, 239, 239) 2px, transparent 2px),
-    linear-gradient(90deg, rgb(224, 224, 224) 2px, transparent 2px),
+  background-color: linear-gradient(to right, #fc354c, #0abfbc);
+  background-image: linear-gradient(rgb(239, 239, 239) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgb(224, 224, 224) 0.5px, transparent 0.5px),
     linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
@@ -312,6 +322,11 @@ p {
 
 .dark-text {
   color: var(--clr-dark-secondary);
+}
+
+.dark-text p {
+  /* font-weight: 300 !important; */
+  color: var(--clr-dark-paragraph);
 }
 
 .dark-line {

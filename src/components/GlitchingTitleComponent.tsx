@@ -10,7 +10,7 @@ const GlitchingTitleComponent = () => {
       className={
         currentMode === "dark"
           ? "dark-glitch glitch-text w-full text-left text-4xl mb-5"
-          : "glitch-text w-full text-left text-4xl mb-5"
+          : "glitch-text w-full text-left text-xl sm:text-2xl md:text-4xl mb-5"
       }
       data-text="I'M RICHARD OSEI"
     >

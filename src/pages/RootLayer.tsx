@@ -25,7 +25,9 @@ const RootLayer = () => {
         <Navbar />
       </header>
       <div className="main-section">
-        <Outlet />
+        <div className={currentMode === "dark" ? "dark-text" : ""}>
+          <Outlet />
+        </div>
       </div>
     </main>
   );

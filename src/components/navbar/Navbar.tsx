@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/logo-r-b.svg";
-import LogoWhite from "../../assets/logo-symbol-r.png";
+import Logo from "../../assets/logo-black.png";
+import LogoWhite from "../../assets/logo.png";
 import { VscColorMode } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../../features/modeSwitch";
@@ -24,34 +24,19 @@ const Navbar = () => {
 
   return (
     <nav className="w-full relative mx-auto py-4 flex justify-center items-center">
-      <div className="w-full px-3 flex justify-between items-center sm:px-10 md:max-w-5xl md:px-14">
+      <div className="w-full px-3 flex justify-between items-center sm:px-10 md:max-w-5xl md:px-14 lg:max-w-6xl">
         <NavLink
           to="/"
-          className="block p-1"
+          className="block relative right-1"
           onClick={() => handleTitleChange("Home")}
         >
           <img
             src={currentMode === "light" ? Logo : LogoWhite}
             alt="logo"
-            className="w-12 h-12"
+            className="w-10 h-10"
           />
         </NavLink>
         <div id="nav-links" className="nav-links  hidden md:flex">
-          <div className="nav-link-container">
-            <NavLink
-              to="projects"
-              className={
-                currentMode === "light" ? "nav-link" : "nav-link dark-text"
-              }
-              onClick={() => handleTitleChange("Projects")}
-            >
-              Projects
-            </NavLink>
-            <div
-              className={currentMode === "light" ? "line" : "dark-line "}
-            ></div>
-          </div>
-
           <div className="nav-link-container">
             <NavLink
               to="about"
@@ -61,6 +46,21 @@ const Navbar = () => {
               onClick={() => handleTitleChange("About")}
             >
               About
+            </NavLink>
+            <div
+              className={currentMode === "light" ? "line" : "dark-line "}
+            ></div>
+          </div>
+
+          <div className="nav-link-container">
+            <NavLink
+              to="projects"
+              className={
+                currentMode === "light" ? "nav-link" : "nav-link dark-text"
+              }
+              onClick={() => handleTitleChange("Projects")}
+            >
+              Projects
             </NavLink>
             <div
               className={currentMode === "light" ? "line" : "dark-line "}
