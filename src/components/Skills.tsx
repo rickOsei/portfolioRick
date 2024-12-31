@@ -1,10 +1,8 @@
-import {
-  FiTwitter,
-  FiLinkedin,
-  FiInstagram,
-  FiGithub,
-  FiMail,
-} from "react-icons/fi";
+import { FaNodeJs } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiReact } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+import { RiJavascriptLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 import { StateType } from "../pages/RootLayer";
 
@@ -15,11 +13,16 @@ const Skills = () => {
 
   return (
     <>
-      <div className="hidden social-media h-full lg:flex flex-col justify-end items-center px-5 space-y-8 ">
-        <FiTwitter className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiGithub className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiLinkedin className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiInstagram className={currentMode === "dark" ? "dark-text" : ""} />
+      <div className="hidden skills-left h-full lg:flex flex-col justify-end items-center px-5 space-y-8 ">
+        <RiJavascriptLine
+          className={currentMode === "dark" ? "dark-text" : ""}
+        />
+        <TbBrandTypescript
+          className={currentMode === "dark" ? "dark-text" : ""}
+        />
+        <SiReact className={currentMode === "dark" ? "dark-text" : ""} />
+        <TbBrandNextjs className={currentMode === "dark" ? "dark-text" : ""} />
+        <FaNodeJs className={currentMode === "dark" ? "dark-text" : ""} />
         <div
           className={
             currentMode === "dark" ? "dark-horizontal" : "horizontal-line"
@@ -30,15 +33,20 @@ const Skills = () => {
       <div
         className={
           currentMode === "dark"
-            ? "social-media-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorDark space-x-8 lg:hidden"
-            : "social-media-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorLight space-x-8 lg:hidden"
+            ? "skills-left-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorDark space-x-8 lg:hidden"
+            : "skills-left-mini w-full px-2 flex flex-row justify-center items-center py-5 bg-bgColorLight space-x-8 lg:hidden"
         }
       >
-        <FiTwitter className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiGithub className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiLinkedin className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiInstagram className={currentMode === "dark" ? "dark-text" : ""} />
-        <FiMail className={currentMode === "dark" ? "dark-text" : ""} />
+        <RiJavascriptLine
+          className={currentMode === "dark" ? "dark-text" : ""}
+        />
+        <TbBrandTypescript
+          className={currentMode === "dark" ? "dark-text" : ""}
+        />
+        <SiReact className={currentMode === "dark" ? "dark-text" : ""} />
+        <TbBrandNextjs className={currentMode === "dark" ? "dark-text" : ""} />
+        <FaNodeJs className={currentMode === "dark" ? "dark-text" : ""} />
+
         <div className="horizontal-line"></div>
       </div>
     </>

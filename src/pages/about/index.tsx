@@ -1,41 +1,59 @@
+import { BsArrowRight } from "react-icons/bs";
 import ExperienceComponent from "../../components/ExperienceComponent";
 import Skills from "../../components/Skills";
+import SkillsTwo from "../../components/Skills-Two";
 
 const About = () => {
   return (
     <main className="w-full relative mx-auto py-4 flex flex-col justify-center items-center lg:flex-row">
       <Skills />
-      <section className="main-content w-full relative mx-auto py-4 flex flex-col justify-center items-center">
+
+      <section className="main-content w-full px-4 pb-10 flex flex-col justify-between items-center sm:px-10 md:max-w-4xl md:px-14 lg:max-w-5xl">
         {/* About Me Section */}
-        <div className="w-full px-4 flex flex-col justify-between items-center sm:px-10 md:max-w-2xl md:px-14 lg:max-w-5xl">
+        <div className="w-full flex flex-col justify-between items-center mb-5">
           <h2 className="mb-4 font-medium w-full">About Me</h2>
-          <div className="space-y-8">
-            <p>
-              As a frontend developer with a knack for graphic design, I
-              specialize in creating visually compelling, user-centric web
-              applications. With a strong foundation in React and modern web
-              technologies, I craft intuitive interfaces that seamlessly combine
-              functionality and aesthetics. My experience in graphic design
-              enhances my ability to deliver polished, cohesive designs,
-              ensuring a balance between technical performance and visual
-              appeal. This blend of development and design expertise allows me
-              to build solutions that are not only efficient but also engaging
-              for users.
+          <div className="space-y-2">
+            <p className="my-1">
+              I’m a front-end developer with a passion for creating visually
+              stunning, user-friendly, and accessible interfaces. My work
+              thrives at the crossroads of design and development, where I blend
+              my graphic design sensibilities with engineering expertise to
+              craft pixel-perfect, high-performance web experiences.
             </p>
-            {/* <a
-              href="https://github.com"
-              target="_blank"
-              className="flex items-center text-teal-600 hover:text-teal-800 mt-4"
-            >
-              <FaGithub className="mr-2" /> View Github
-            </a> */}
+            <p className="my-1">
+              Currently, I specialize in developing seamless, interactive user
+              interfaces that not only look beautiful but also prioritize
+              usability and inclusivity. Whether it’s building reusable
+              component libraries or refining visual details, I aim to deliver
+              solutions that resonate with users and adhere to best practices.
+            </p>
+            <p className="my-1">
+              In my career, I’ve worked across diverse environments, from
+              startups to established companies, collaborating with teams to
+              bring creative concepts to life. My design background informs my
+              approach, allowing me to bridge the gap between visual
+              storytelling and functional, scalable code.
+            </p>
+            <p className="my-1">
+              When I’m not coding or designing, you can find me exploring new
+              design trends, experimenting with illustration and motion
+              graphics, or diving into creative side projects that keep me
+              inspired.
+            </p>
           </div>
-          {/* </div> */}
         </div>
 
         {/* Experience Section */}
         <ExperienceComponent />
+
+        <div className="w-full flex flex-row justify-start items-center mt-10 text-secondaryColor">
+          <p className="!text-secondaryColor">View Full Résumé</p>
+          <span className="pointing-arrow">
+            <BsArrowRight />
+          </span>
+        </div>
       </section>
+      <SkillsTwo />
     </main>
   );
 };

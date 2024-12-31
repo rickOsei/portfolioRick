@@ -7,16 +7,16 @@ const ExperienceComponent = () => {
     modeReducer: { currentMode },
   } = useSelector((state: StateType) => state);
   return (
-    <div className="mt-10 mb-4 px-4 sm:px-10 md:max-w-2xl md:px-14 lg:max-w-5xl">
+    <div className="mt-5">
       <h2 className="mb-4 font-medium">Experience</h2>
-      <div className="w-full relative mx-auto py-4 flex flex-col justify-center items-center">
+      <div className="w-full relative mx-auto flex flex-col justify-center items-center">
         {data.map((item) => {
           return (
-            <div className="main-content w-full  flex flex-col justify-between items-center ">
+            <div className="main-content w-full py-2 flex flex-col justify-between items-center mb-4">
               {/* <div className={currentMode === "dark" ? "dark-text" : ""}> */}
-              <div className="flex flex-col-reverse items-start justify-center w-full  md:flex-row md:justify-between md:items-center">
+              <div className="flex flex-col-reverse gap-1 items-start justify-center w-full md:flex-row md:justify-between md:items-center">
                 <h3 className="text-lg font-medium">{item.title}</h3>
-                <span className="text-sm font-medium">{item.period}</span>
+                <span className="text-sm font-medium ">{item.period}</span>
               </div>
               <p>{item.details}</p>
               <div className=" w-full mt-4 flex flex-wrap gap-2">
