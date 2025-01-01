@@ -7,9 +7,9 @@ export const data = [
     skills: ["React", "MUI", "JSDoc", "Javascript"],
   },
   {
-    title: "Senior Frontend Developer · Cedirates, Ghana",
+    title: "Fullstack Developer · Cedirates, Ghana",
     details:
-      "Collaborated with designers, engineers, and product managers to develop user-friendly financial tools, including exchange rate trackers and currency converters, enhancing access to real-time financial data for users.",
+      "Collaborated with cross-functional teams, including designers, backend engineers, and product managers, to develop robust and user-friendly financial tools. Implemented features such as real-time exchange rate trackers and currency converters, ensuring seamless integration between frontend interfaces and backend APIs to deliver accurate, real-time financial data to users.",
     period: "2022 — ",
     skills: ["NextJs", "Shadcn", "Typescript", "Javascript", "TailwindCSS"],
   },
