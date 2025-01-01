@@ -1,18 +1,20 @@
 import { useSelector } from "react-redux";
-import { StateType } from "../pages/RootLayer";
-import { useState } from "react";
+import { MenuContext, StateType } from "../pages/RootLayer";
+import { useContext } from "react";
 
 const HamburgerComponent = () => {
-  const [showNavMenu, setShowNavMenu] = useState(false);
   const {
     modeReducer: { currentMode },
   } = useSelector((state: StateType) => state);
+
+  const { showNavMenu, setShowNavMenu } = useContext(MenuContext);
+
   return (
     <button
       id="menu-btn"
       className={`${
         showNavMenu && "open"
-      } block hamburger md:hidden focus:outline-none`}
+      } block hamburger md:hidden focus:outline-none z-[999]`}
       onClick={() => setShowNavMenu((prev) => !prev)}
     >
       <span

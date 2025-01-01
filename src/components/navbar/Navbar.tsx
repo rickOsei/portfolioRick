@@ -40,9 +40,9 @@ const Navbar = () => {
           <div className="nav-link-container">
             <NavLink
               to="about"
-              className={
-                currentMode === "light" ? "nav-link" : "nav-link dark-text"
-              }
+              className={`${
+                currentMode === "dark" && "dark-text"
+              } current-lg-link nav-link`}
               onClick={() => handleTitleChange("About")}
             >
               About
@@ -55,9 +55,9 @@ const Navbar = () => {
           <div className="nav-link-container">
             <NavLink
               to="projects"
-              className={
-                currentMode === "light" ? "nav-link" : "nav-link dark-text"
-              }
+              className={`${
+                currentMode === "dark" && "dark-text"
+              } current-lg-link nav-link`}
               onClick={() => handleTitleChange("Projects")}
             >
               Projects
@@ -70,9 +70,9 @@ const Navbar = () => {
           <div className="nav-link-container">
             <NavLink
               to="contact"
-              className={
-                currentMode === "light" ? "nav-link" : "nav-link dark-text"
-              }
+              className={`${
+                currentMode === "dark" && "dark-text"
+              } current-lg-link nav-link`}
               onClick={() => handleTitleChange("Contact")}
             >
               Contact

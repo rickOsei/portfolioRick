@@ -145,9 +145,23 @@ p {
   cursor: pointer;
   padding: 10px 15px;
   height: 100vh;
+  /* position: relative; */
   border: 2px solid transparent;
   transition: all 1s ease;
   font-size: 12.5px;
+}
+
+.nav-link-container {
+  position: relative;
+  padding: 5px;
+}
+
+.current-link.active {
+  color: var(--clr-secondary-color);
+}
+
+.current-lg-link.active {
+  display: none;
 }
 
 .line {
