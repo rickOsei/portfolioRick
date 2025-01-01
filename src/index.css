@@ -37,6 +37,7 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  transition: all 0.05s ease-in-out;
 }
 
 /* Global Styles */
@@ -431,7 +432,11 @@ p {
     font-size: 13.5px;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .nav-link-container {
+    padding: 0;
+  }
+}
 /* key-frames */
 
 @keyframes gradient {
