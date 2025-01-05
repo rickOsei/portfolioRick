@@ -42,10 +42,10 @@ const Home = () => {
         {/* <div> */}
         <NavLink
           to="about"
-          className="w-full flex flex-row justify-start items-center mt-10 text-secondaryColor"
+          className="w-full flex flex-row justify-start items-center mt-10 "
         >
-          <p className="!text-secondaryColor">Get To Know More</p>
-          <span className="pointing-arrow">
+          <h2 className="font-medium !text-secondaryColor">Get To Know More</h2>
+          <span className="pointing-arrow !text-secondaryColor">
             <BsArrowRight />
           </span>
         </NavLink>

@@ -25,10 +25,10 @@ const MobileNav = () => {
 
   return (
     <div
-      className={`w-[100vw] ${
+      className={`w-[100vw] transition-all duration-[1s] ease-in-out ${
         currentMode === "dark" ? "bg-black" : "bg-[#fffdfc]"
       } absolute left-0 z-30 px-3 py-14 sm:px-10 ${
-        showNavMenu ? "h-[100vh] top-0" : "h-0 top-[-50%]"
+        showNavMenu ? "h-[100vh] top-0" : "h-0 top-[-100%]"
       } md:hidden`}
     >
       <div className="flex w-full justify-between">
@@ -58,7 +58,7 @@ const MobileNav = () => {
             className={`${
               currentMode === "dark" && "dark-text"
             } current-link text-lg uppercase font-semibold`}
-            // onClick={() => handleTitleChange("About")}
+            onClick={() => handleTitleChange("About")}
           >
             About
           </NavLink>

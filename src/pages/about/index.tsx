@@ -46,15 +46,17 @@ const About = () => {
         {/* Experience Section */}
         <ExperienceComponent />
 
-        <div className="w-full flex flex-row justify-start items-center mt-10 text-secondaryColor">
+        <div className="w-full flex flex-row justify-start items-center mt-10 ">
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-row items-center space-x-2 text-secondaryColor hover:underline"
+            className="flex flex-row items-center space-x-2 hover:underline"
           >
-            <p className="!text-secondaryColor">View Full Résumé</p>
-            <span className="pointing-arrow">
+            <h2 className="font-medium !text-secondaryColor">
+              View Full Résumé
+            </h2>
+            <span className="pointing-arrow !text-secondaryColor">
               <BsArrowRight />
             </span>
           </a>

@@ -15,7 +15,7 @@ const ExperienceComponent = () => {
             <div className="main-content w-full py-2 flex flex-col justify-between items-center mb-4">
               {/* <div className={currentMode === "dark" ? "dark-text" : ""}> */}
               <div className="flex flex-col-reverse gap-1 items-start justify-center w-full md:flex-row md:justify-between md:items-center">
-                <h3 className="text-lg font-medium">{item.title}</h3>
+                <h2 className="font-medium">{item.title}</h2>
                 <span className="text-sm font-medium ">{item.period}</span>
               </div>
               <p>{item.details}</p>
