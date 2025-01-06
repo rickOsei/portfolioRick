@@ -3,27 +3,29 @@ import PortfolioImage from "../assets/projects/portfolio.webp";
 import TelicalImage from "../assets/projects/telical-light.webp";
 export const data = [
   {
-    title: "Senior Frontend Engineer · Abibiman Ltd, Ghana",
+    title: "Cedirates",
     details:
-      "Build and maintain critical components for the telehealth platform’s frontend. Collaborate with UI designers, backend developers, and product managers to deliver innovative healthcare solutions while advocating for best practices in accessibility and performance.",
+      "A web app that provides up-to-date fuel prices and foreign exchange rates for the Ghanaian market. It combines a clean UI with a content-driven approach, featuring articles and insights for financial and energy sector enthusiasts. Topics covered include API integration, dynamic data fetching, and mobile-first design principles.",
     img: CediratesImage,
     extras: "",
-    skills: ["React", "MUI", "JSDoc", "Javascript"],
+    skills: ["NextJs", "Shadcn", "Typescript", "Javascript", "TailwindCSS"],
+    link: "https://cedirates.com/",
   },
   {
-    title: "Fullstack Developer · Cedirates, Ghana",
+    title: "Telical Health",
     details:
-      "Collaborated with cross-functional teams, including designers, backend engineers, and product managers, to develop robust and user-friendly financial tools. Implemented features such as real-time exchange rate trackers and currency converters, ensuring seamless integration between frontend interfaces and backend APIs to deliver accurate, real-time financial data to users.",
+      "A full-featured web app that bridges the gap between patients and healthcare providers. Built to deliver seamless virtual healthcare, it includes functionalities like patient-doctor consultations, prescription handling, and medication delivery. Topics covered in its development include WebSocket communication, real-time call adjustments, resilient localStorage-based error handling, and responsive design .",
     img: TelicalImage,
     extras: "",
-    skills: ["NextJs", "Shadcn", "Typescript", "Javascript", "TailwindCSS"],
+    skills: ["React", "MUI", "JSDoc", "Javascript"],
+    link: "https://www.telicalhealth.com/",
   },
   {
-    title: "Fullstack Developer · Cedirates, Ghana",
+    title: "My Personal Portfolio",
     details:
-      "Collaborated with cross-functional teams, including designers, backend engineers, and product managers, to develop robust and user-friendly financial tools. Implemented features such as real-time exchange rate trackers and currency converters, ensuring seamless integration between frontend interfaces and backend APIs to deliver accurate, real-time financial data to users.",
+      "A responsive web app that showcases my personal projects and professional expertise.",
     img: PortfolioImage,
     extras: "",
-    skills: ["NextJs", "Shadcn", "Typescript", "Javascript", "TailwindCSS"],
+    skills: ["React", "Vite", "Typescript", "TailwindCSS"],
   },
 ];
