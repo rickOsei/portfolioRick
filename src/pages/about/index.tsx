@@ -11,7 +11,9 @@ const About = () => {
       <section className="main-content w-full px-4 pb-10 flex flex-col justify-between items-center sm:px-10 md:max-w-4xl md:px-14 lg:max-w-5xl">
         {/* About Me Section */}
         <div className="w-full flex flex-col justify-between items-center mb-5">
-          <h2 className="mb-4 font-medium w-full">About Me</h2>
+          <h2 className="font-black text-4xl leading-normal w-full mb-5">
+            About Me
+          </h2>
           <div className="space-y-2">
             <p className="my-1">
               I’m a front-end developer with a passion for creating visually

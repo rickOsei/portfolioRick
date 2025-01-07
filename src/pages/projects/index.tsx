@@ -9,7 +9,9 @@ const Projects = () => {
 
       <section className="main-content w-full px-4 pb-10 flex flex-col justify-between items-center sm:px-10 md:max-w-4xl md:px-14 lg:max-w-5xl">
         <div className="w-full flex flex-col justify-between items-center mb-5">
-          <h2 className="mb-4 font-medium w-full">My Projects</h2>
+          <h2 className="font-black text-4xl leading-normal w-full mb-5">
+            Projects
+          </h2>
           <div className="space-y-2">
             <p className="my-1">
               Here, you'll find a collection of projects that showcase my

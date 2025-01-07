@@ -7,7 +7,10 @@ const EmailComponent = () => {
 
   return (
     <>
-      <div className="hidden email-address h-full lg:flex flex-col justify-end items-center px-5 space-y-8 ">
+      <a
+        href="mailto:rickoseiampah@gmail.com"
+        className="hidden email-address h-full lg:flex flex-col justify-end items-center px-5 space-y-8 "
+      >
         <p className={currentMode === "dark" ? "dark-text" : ""}>
           rickoseiampah@gmail.com
         </p>
@@ -16,7 +19,7 @@ const EmailComponent = () => {
             currentMode === "dark" ? "dark-horizontal" : "horizontal-line"
           }
         ></div>
-      </div>
+      </a>
     </>
   );
 };
