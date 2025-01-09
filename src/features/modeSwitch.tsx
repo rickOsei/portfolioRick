@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+const CURRENT_MODE = "portfolio-current-mode";
+const currentMode = localStorage.getItem(CURRENT_MODE) || "dark";
 
 const initialState = {
-  currentMode: "light",
+  currentMode: currentMode,
 };
 
 const modeSlice = createSlice({
@@ -9,9 +11,14 @@ const modeSlice = createSlice({
   initialState,
   reducers: {
     setMode: (state) => {
-      state.currentMode === "light"
-        ? (state.currentMode = "dark")
-        : (state.currentMode = "light");
+      state.currentMode === "light";
+      if (state.currentMode === "light") {
+        state.currentMode = "dark";
+        localStorage.setItem(CURRENT_MODE, "dark");
+      } else {
+        state.currentMode = "light";
+        localStorage.setItem(CURRENT_MODE, "light");
+      }
     },
   },
 });
