@@ -1,6 +1,7 @@
 import CediratesImage from "../assets/projects/cedirates.webp";
 import PortfolioImage from "../assets/projects/portfolio.webp";
 import TelicalImage from "../assets/projects/telical-light.webp";
+import EdfricaImage from "../assets/projects/edfrica.webp";
 export const data = [
   {
     title: "Cedirates",
@@ -19,6 +20,15 @@ export const data = [
     extras: "",
     skills: ["React", "MUI", "JSDoc", "Javascript"],
     link: "https://www.telicalhealth.com/",
+  },
+  {
+    title: "Edfrica",
+    details:
+      "A comprehensive educational platform designed to enhance learning experiences through interactive tools and seamless digital resources. Built to empower both students and educators, it offers features such as progress tracking, AI tutor for personalized guidance, a PDF chat analyzer for seamless document-based learning, and an ML-driven assessment system for adaptive evaluations. Key aspects of its development include real-time data synchronization, intuitive UI/UX for engagement, and scalable architecture for diverse educational needs.",
+    img: EdfricaImage,
+    extras: "",
+    skills: ["React", "MUI", "Javascript"],
+    link: "https://www.edfrica.com/",
   },
   {
     title: "My Personal Portfolio",
