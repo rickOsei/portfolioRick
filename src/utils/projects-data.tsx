@@ -19,7 +19,7 @@ export const data = [
     img: TelicalImage,
     extras: "",
     skills: ["React", "MUI", "JSDoc", "Javascript"],
-    link: "https://www.telicalhealth.com/",
+    link: "https://staging.telicalhealth.com/",
   },
   {
     title: "Edfrica",
